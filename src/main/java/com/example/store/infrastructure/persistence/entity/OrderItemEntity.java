@@ -27,9 +27,8 @@ public class OrderItemEntity {
     private ProductEntity product;
 
     private Integer quantity;
-
-    private Double unitPrice;
-
+    
+    private BigDecimal unitPrice;
+    
     private BigDecimal subtotal;
-
-}
+} 

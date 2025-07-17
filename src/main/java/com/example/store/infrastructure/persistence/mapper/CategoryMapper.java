@@ -16,4 +16,4 @@ public class CategoryMapper {
         entity.setName(model.getName());
         return entity;
     }
-} 
+}

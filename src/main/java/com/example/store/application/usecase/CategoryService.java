@@ -30,8 +30,8 @@ public class CategoryService {
     }
 
     public Category update(UUID id, Category category) {
-        Category existingCategory = getById(id);
-        category.setId(existingCategory.getId());
+        categoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Category not found"));
+        category.setId(id);
         return categoryRepository.save(category);
     }
 } 

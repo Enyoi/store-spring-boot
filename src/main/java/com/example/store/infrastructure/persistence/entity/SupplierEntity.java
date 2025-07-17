@@ -20,11 +20,15 @@ public class SupplierEntity {
     private UUID id;
 
     private String name;
+    
     private String email;
+    
     private String phone;
+    
     private String address;
+    
     private String contactPerson;
 
     @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<PurchaseEntity> purchases = new ArrayList<>();
-}
+} 

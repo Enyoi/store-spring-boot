@@ -26,12 +26,11 @@ public class OrderEntity {
     private CustomerEntity customer;
 
     private LocalDateTime orderDate;
-
+    
     private String status;
-
+    
     private BigDecimal totalAmount;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<OrderItemEntity> orderItems = new ArrayList<>();
-
-}
+} 

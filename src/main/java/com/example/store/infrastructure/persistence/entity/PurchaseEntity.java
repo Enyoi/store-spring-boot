@@ -26,13 +26,13 @@ public class PurchaseEntity {
     private SupplierEntity supplier;
 
     private LocalDateTime purchaseDate;
-
+    
     private String status;
-
+    
     private BigDecimal totalAmount;
-
+    
     private String invoiceNumber;
 
     @OneToMany(mappedBy = "purchase", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<PurchaseItemEntity> purchaseItems = new ArrayList<>();
-}
+} 

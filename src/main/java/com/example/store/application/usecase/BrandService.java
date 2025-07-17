@@ -30,8 +30,8 @@ public class BrandService {
     }
 
     public Brand update(UUID id, Brand brand) {
-        Brand existingBrand = getById(id);
-        brand.setId(existingBrand.getId());
+        brandRepository.findById(id).orElseThrow(() -> new RuntimeException("Brand not found"));
+        brand.setId(id);
         return brandRepository.save(brand);
     }
 } 

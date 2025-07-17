@@ -33,6 +33,7 @@ public class ProductMapper {
         productEntity.setPrice(model.getPrice());
         productEntity.setCategory(categoryEntity);
         productEntity.setBrand(brandEntity);
+
         return productEntity;
     }
 }

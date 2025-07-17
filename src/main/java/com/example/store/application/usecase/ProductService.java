@@ -30,8 +30,8 @@ public class ProductService {
     }
 
     public Product update(UUID id, Product product) {
-        Product existingProduct = getById(id);
-        product.setId(existingProduct.getId());
+        productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
+        product.setId(id);
         return productRepository.save(product);
     }
 }
